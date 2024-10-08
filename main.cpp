@@ -11,10 +11,10 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 using namespace std;
 
 int main() {
-   char restart;
+   char restart;                                                        //Variable de boucle du programme
    do {
-      unsigned int end_intervale;
-
+      unsigned int end_intervale;                                       //La fin de l'interval
+      unsigned int col_count_array;                                     //Quantité des nombres premiers inscrits
       //Introduction du programme
       cout << "Bienvenue sur le listeur des nombres premiers"  << endl
            << " ******************************************* "  << endl
@@ -29,26 +29,31 @@ int main() {
 
       //Calcule des nombres premier et génération d'affichage
       cout << "Voici la liste des nombres premiers  "          << endl;
+      col_count_array = 0;
 
-      for (unsigned int i = 1; i <= end_intervale; i += 2) {
-         for (unsigned int diviseur = 1; diviseur <= i; diviseur += 2) {
-            if (i == diviseur || (float)diviseur > (float)i / 2) {
-               cout << "\t"<< i << "\t";
+
+      for (unsigned int i = 1; i <= end_intervale; i += 2) {               // Enlever les nombres paire dans les nombres à tester
+         for (unsigned int diviseur = 1; diviseur <= i; diviseur += 2) {   // Prendre que des diviseurs impaire
+            if (i == diviseur || (float)diviseur > (float)i / 2) {         // Vérifier que le nombre est divisible par 1 et lui meme
+
+               cout << "\t"<< i << " ";
+
+               if (++col_count_array % 5 == 0)                             // Faire la tablulation pour affichage tableau
+                  cout << endl;
+
                break;
             }
-            if (i % diviseur == 0 && diviseur != 1) {
+            if (i % diviseur == 0 && diviseur != 1)                        //Tester le si le dividant admet notre diseur dans ses diviseurs
                break;
-            }
+
          }
-         if (i % 5 == 0) { // Faire la tablulation pour l'array
-            cout << endl;
-         }
+
       }
       cout << endl;
 
       //Boucle pour demander de recommencer
       do {
-         cout << "Do you want to restart the program (O/N)?" << endl;
+         cout << "Voulez-vous recommencer [O/N] :" << endl;
          cin >> restart;
       } while (restart != 'O' && restart != 'N');
    }while (restart == 'O');
