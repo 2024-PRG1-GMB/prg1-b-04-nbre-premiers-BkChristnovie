@@ -1,0 +1,3 @@
+C:/Users/Helpdesk.NB-8788/Documents/prg1-b-04-nbre-premiers-BkChristnovie/cmake-build-debug/CMakeFiles/prg1_b_04_nbre_premiers_BkChristnovie.dir
+C:/Users/Helpdesk.NB-8788/Documents/prg1-b-04-nbre-premiers-BkChristnovie/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Helpdesk.NB-8788/Documents/prg1-b-04-nbre-premiers-BkChristnovie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
